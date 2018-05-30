@@ -10,9 +10,8 @@ import getters from './getters'
 Vue.use(Vuex)
 
 const state = {
-  test: 0,
   userInfo: {},
-  count: 0
+  scenarioList: []
 }
 
 export default new Vuex.Store({

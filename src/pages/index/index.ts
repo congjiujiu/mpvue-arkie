@@ -1,9 +1,14 @@
 import { Vue, Component } from 'vue-property-decorator'
+import { State, Action } from 'vuex-class'
+
+import { SCENARIO_INIT } from '@/store/mutation-types'
+
 import { AppUrls } from '@/utils/consts.ts'
 import loginApi from '@/utils/api/login'
 import scenarioApi from '@/utils/api/scenario'
-import CompB from '@/components/compb.vue' // mpvue目前只支持的单文件组件
-import Number from '@/components/number' // mpvue目前只支持的单文件组件
+
+import CompB from '@/components/compb.vue'
+import Number from '@/components/number'
 
 const debug = require('debug')('log:Index')
 
@@ -16,37 +21,19 @@ const debug = require('debug')('log:Index')
 })
 class Index extends Vue {
   AppUrls = AppUrls
-  ver: number = 123
-  array: Object[] = [
-    {
-      data: {
-        num: 0
-      }
-    }, {
-      data: {
-        num: 1
-      }
-    }, {
-      data: {
-        num: 2
-      }
-    }
-  ]
+  @State('scenarioList') scenarioList
+  @Action('scenarioAll') getScenarioList
 
-  onShow() { // 小程序 hook
-    debug('onShow')
-  }
-
-  mounted() { // vue hook
+  created() {
     this.login()
-    debug('mounted')
   }
+
+  mounted() {}
 
   async login() {
     await loginApi.login()
-    const scenarioList = await scenarioApi.scenarioList()
 
-    console.log(scenarioList)
+    this.getScenarioList()
   }
 }
 

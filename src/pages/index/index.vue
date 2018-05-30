@@ -1,11 +1,5 @@
 <template>
   <div class="counter-warp">
-    <p>Mpvue</p>
-    <p>ts value {{ ver }}</p>
-    <comp-b text="hello2"></comp-b>
-    <comp-alias text="hello3"></comp-alias>
-    <number :numList="array"/>
-    <a :href="AppUrls.COUNTER" class="home">去往vuex</a>
   </div>
 </template>
 <!--必须指定为ts-->

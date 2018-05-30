@@ -2,7 +2,7 @@ import http from './http'
 
 class Scenario {
   scenarioList() {
-    return http.get('/v2/scenario?platform=wxapp')
+    return http.get('/v2/scenario?platform=wxapp').then(res => res.data)
   }
 }
 
