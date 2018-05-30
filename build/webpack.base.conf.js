@@ -21,7 +21,7 @@ function getEntry (rootSrc, pattern) {
 }
 
 function getEnvPath(env) {
-  return resolve(`config/${env}.env.js`)
+  return resolve('config/' + env + '.env.js')
 }
 
 const appEntry = { app: resolve('./src/main.ts') }
@@ -47,7 +47,7 @@ module.exports = {
       'vue': 'mpvue',
       '@': resolve('src'),
       'debug': resolve('src/utils/debug'),
-      'env': getEnvPath(NODE_ENV),
+      'env': getEnvPath(NODE_ENV)
     },
     symlinks: false
   },

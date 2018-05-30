@@ -33,8 +33,8 @@ class Index extends Vue {
   ]
 
   onShow() { // 小程序 hook
-    debug('onShow')
     loginApi.login()
+    debug('onShow')
   }
 
   mounted() { // vue hook

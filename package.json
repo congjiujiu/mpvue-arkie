@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "start": "node build/dev-server.js",
-    "dev": "NODE_ENV=dev node $NODE_DEBUG_OPTION build/dev-server.js",
-    "staging": "NODE_ENV=staging node $NODE_DEBUG_OPTION build/dev-server.js",
-    "prod": "NODE_ENV=www node $NODE_DEBUG_OPTION build/dev-server.js",
+    "dev": "NODE_ENV=dev node build/dev-server.js",
+    "staging": "NODE_ENV=staging node build/dev-server.js",
+    "prod": "NODE_ENV=www node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
