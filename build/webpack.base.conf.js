@@ -47,6 +47,7 @@ module.exports = {
       'vue': 'mpvue',
       '@': resolve('src'),
       'debug': resolve('src/utils/debug'),
+      'we': resolve('src/utils/we'),
       'env': getEnvPath(NODE_ENV)
     },
     symlinks: false
