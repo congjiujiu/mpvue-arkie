@@ -3,5 +3,5 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  API_URL: 'https://dev.arkie.cn'
+  API_URL: 'https://www.arkie.cn'
 })

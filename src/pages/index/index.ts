@@ -1,5 +1,6 @@
 import { Vue, Component } from 'vue-property-decorator'
 import { AppUrls } from '@/utils/consts.ts'
+import loginApi from '@/utils/api/login'
 import CompB from '@/components/compb.vue' // mpvue目前只支持的单文件组件
 import Number from '@/components/number' // mpvue目前只支持的单文件组件
 
@@ -33,6 +34,7 @@ class Index extends Vue {
 
   onShow() { // 小程序 hook
     debug('onShow')
+    loginApi.login()
   }
 
   mounted() { // vue hook

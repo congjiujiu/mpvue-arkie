@@ -20,9 +20,14 @@ function getEntry (rootSrc, pattern) {
   }, {})
 }
 
+function getEnvPath(env) {
+  return resolve(`config/${env}.env.js`)
+}
+
 const appEntry = { app: resolve('./src/main.ts') }
 const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.ts')
 const entry = Object.assign({}, appEntry, pagesEntry)
+const NODE_ENV = process.env.NODE_ENV
 
 module.exports = {
   entry: entry, // 如果要自定义生成的 dist 目录里面的文件路径，
@@ -42,6 +47,7 @@ module.exports = {
       'vue': 'mpvue',
       '@': resolve('src'),
       'debug': resolve('src/utils/debug'),
+      'env': getEnvPath(NODE_ENV),
     },
     symlinks: false
   },
