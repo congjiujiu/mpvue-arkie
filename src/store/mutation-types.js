@@ -1,1 +1,2 @@
-export const SCENARIO_INIT = 'SCENARIO_INIT' // 这是测试的
+export const SCENARIO_INIT = 'SCENARIO_INIT'
+export const COMMON_CONFIG_INIT = 'COMMON_CONFIG_INIT'

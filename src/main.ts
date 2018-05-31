@@ -1,5 +1,6 @@
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator';
 import { VueConstructor } from "vue";
+import _ from 'lodash'
 import store from './store'
 
 interface IMpVue extends VueConstructor {
@@ -26,6 +27,7 @@ Component.registerHooks([
 ])
  
 Vue.prototype.$store = store
+Vue.prototype._ = _
 Vue.config.productionTip = false
 // 在这个地方引入是为了registerHooks先执行
 const MyApp = require('./App.vue').default as IMpVue

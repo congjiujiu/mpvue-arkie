@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import createPersistedState from 'vuex-persistedstate'
+import createLogger from 'vuex/dist/logger'
 
 import mutations from './mutations'
 import actions from './action'
@@ -11,7 +12,8 @@ Vue.use(Vuex)
 
 const state = {
   userInfo: {},
-  scenarioList: []
+  scenarioList: {},
+  commonConfigList: {}
 }
 
 export default new Vuex.Store({
@@ -26,6 +28,7 @@ export default new Vuex.Store({
         setItem: (key, value) => wx.setStorageSync(key, value),
         removeItem: key => wx.clearStorage()
       }
-    })
+    }),
+    createLogger()
   ]
 })
