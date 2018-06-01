@@ -5,7 +5,8 @@ import CommonConfigFactory from '@/utils/factory/commonConfig'
 
 import {
   SCENARIO_INIT,
-  COMMON_CONFIG_INIT
+  COMMON_CONFIG_INIT,
+  CONFIGURATION_INIT
 } from './mutation-types.js'
 
 export default {
@@ -20,5 +21,10 @@ export default {
   initCommonConfig ({ commit }, data) {
     let scenario = data.map(s => new CommonConfigFactory(s))
     commit(COMMON_CONFIG_INIT, scenario)
+  },
+  getConfiguration ({ commit }) {
+    scenarioApi.configuration().then(res => {
+      commit(CONFIGURATION_INIT, res.data)
+    })
   }
 }

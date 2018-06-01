@@ -12,6 +12,7 @@ Vue.use(Vuex)
 
 const state = {
   userInfo: {},
+  configuration: [],
   scenarioList: {},
   commonConfigList: {}
 }

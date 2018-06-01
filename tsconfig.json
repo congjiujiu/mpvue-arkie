@@ -26,6 +26,7 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
+    "sourceMap": true,
     "strictPropertyInitialization": false,
     "experimentalDecorators": true
   },

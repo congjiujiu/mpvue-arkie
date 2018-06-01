@@ -1,7 +1,8 @@
 import _ from 'lodash'
 import {
   SCENARIO_INIT,
-  COMMON_CONFIG_INIT
+  COMMON_CONFIG_INIT,
+  CONFIGURATION_INIT
 } from './mutation-types.js'
 
 export default {
@@ -10,5 +11,8 @@ export default {
   },
   [COMMON_CONFIG_INIT] (state, data) {
     state.commonConfigList = _.keyBy(data, 'id')
+  },
+  [CONFIGURATION_INIT] (state, data) {
+    state.configuration = data
   }
 }

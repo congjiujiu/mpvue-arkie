@@ -1,5 +1,6 @@
 <template>
   <div class="counter-warp">
+    <scenario-list :list="indexScenarios" :configuration="configuration"/>
   </div>
 </template>
 <!--必须指定为ts-->
