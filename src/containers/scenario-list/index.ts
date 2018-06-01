@@ -1,7 +1,13 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import _ from 'lodash'
 
-@Component
+import ScenarioCard from '@/components/scenario/scenario-card'
+
+@Component({
+  components: {
+    ScenarioCard
+  }
+})
 class ScenarioList extends Vue {
   @Prop() list
   @Prop() configuration

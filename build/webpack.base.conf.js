@@ -25,7 +25,7 @@ function getEnvPath(env) {
 }
 
 const appEntry = { app: resolve('./src/main.ts') }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.ts')
+const pagesEntry = getEntry(resolve('./src'), 'pages/*.ts')
 const entry = Object.assign({}, appEntry, pagesEntry)
 const NODE_ENV = process.env.NODE_ENV
 

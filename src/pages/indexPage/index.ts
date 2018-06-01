@@ -7,7 +7,7 @@ import { AppUrls } from '@/utils/consts.ts'
 import loginApi from '@/utils/api/login'
 import scenarioApi from '@/utils/api/scenario'
 
-import scenarioList from '@/components/scenario-list'
+import scenarioList from '@/containers/scenario-list'
 
 // 必须使用装饰器的方式来指定component
 @Component({
