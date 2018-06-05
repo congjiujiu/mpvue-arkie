@@ -6,14 +6,14 @@
         <div class="scenario-list-part">
           <block v-for="scenario in scenarioCategory.listA" :key="scenario.id">
             <div v-if="scenario.isMywork" :scenario="scenario" >my work card</div>
-            <div v-else-if="scenario.isContactCard">a contact card</div>
+            <contact-card v-else-if="scenario.isContactCard" />
             <scenario-card v-else :scenario="scenario" />
           </block>
         </div>
         <div class="scenario-list-part">
           <block v-for="scenario in scenarioCategory.listB" :key="scenario.id">
             <div v-if="scenario.isMywork" :scenario="scenario" >my work card</div>
-            <div v-else-if="scenario.isContactCard">a contact card</div>
+            <contact-card v-else-if="scenario.isContactCard" />
             <scenario-card v-else :scenario="scenario" />
           </block>
         </div>
@@ -25,6 +25,10 @@
 <script lang="ts" src="./index.ts"></script>
 
 <style lang="less" scoped>
+.scenario-list {
+  width: 100%;
+  box-sizing: border-box;
+}
 .scenario-wrap-title {
   font-size: 28rpx;
   font-weight: 500;

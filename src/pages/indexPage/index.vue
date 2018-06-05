@@ -1,5 +1,6 @@
 <template>
   <div class="page-index">
+    <div class="arkie-logo-banner"></div>
     <div class="container">
       <scenario-list :list="indexScenarios" :configuration="configuration"/>
     </div>
@@ -19,5 +20,16 @@
   padding: 18rpx 18rpx 78rpx;
   font-family: PingFangSC;
   background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.arkie-logo-banner {
+  width: 100%;
+  height: 320rpx;
+  background-image: url(https://arkie-public.oss-cn-hangzhou.aliyuncs.com/app/scenarioAssets/v2/banner-brand.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-bottom: 18rpx;
 }
 </style>
